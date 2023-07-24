@@ -1,4 +1,4 @@
-/* FeedEk jQuery RSS/ATOM Feed Plugin v3.2.0
+/* FeedEk jQuery RSS/ATOM Feed Plugin v3.2.1
 * https://jquery-plugins.net/FeedEk/FeedEk.html  https://github.com/enginkizil/FeedEk 
 * Author : Engin KIZIL */
 (function ($) {
@@ -30,7 +30,7 @@
 		}
 		var getFeedData = function () {
 			divFeed.empty();
-			divFeed.append('<img src="loader.gif" />');
+			divFeed.append('<progress></progress>');
 			$.ajax({
 				url: "https://feed.jquery-plugins.net/load?url=" + def.FeedUrl + "&maxCount=" + def.MaxCount + "&dateCulture=" + def.DateFormatLang + "&dateFormat=" + def.DateFormat + "&offset=" + def.Offset,
 				dataType: "json",
